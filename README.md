@@ -14,6 +14,13 @@
 ## Overview
 This project is a full-stack food delivery application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It provides users with a platform to explore a diverse menu, place orders, and manage their cart. The admin section allows restaurant owners to add items, list items, and manage orders efficiently.
 
+### Website Features
+- **User-Friendly Interface**: Intuitive design and easy navigation enhance the user experience.
+- **Menu Exploration**: Users can browse through various categories and items on the menu.
+- **Order Placement**: Seamless order placement with options for customization.
+- **Cart Management**: Users can view and edit their cart before proceeding to checkout.
+- **Admin Dashboard**: Restaurant owners can manage menu items, view orders, and track sales through the admin section.
+
 ## Prerequisites
 - **Node.js**: Ensure that Node.js is installed on your machine. If not, visit the [official Node.js website](https://nodejs.org/en/download/) to download and install it.
 - **GitHub Account**: You'll need a GitHub account to clone the project repository.
@@ -22,9 +29,8 @@ This project is a full-stack food delivery application built using the MERN (Mon
 1. **Clone the Project**:
    - Clone the project repository from GitHub using the following command:
      ```bash
-     git clone [<repository_url>](https://github.com/Mohan6040/FOODIE_DELIVERY_MERN-STACK.git)
+     git clone https://github.com/Mohan6040/FOODIE_DELIVERY_MERN-STACK.git
      ```
-  
 
 2. **Open Project Folder**:
    - Open the project folder in Visual Studio Code (VS Code) or any preferred code editor.
@@ -116,6 +122,7 @@ Follow these steps to set up MongoDB Atlas and MongoDB Compass for database mana
 ## Environment Variables
 Ensure you add the following environment variables to a `.env` file in the backend folder:
 
+```plaintext
 ```plaintext
 JWT_SECRET="random#secret"
 STRIPE_SECRET_KEY="Paste your stripe secret key here"
