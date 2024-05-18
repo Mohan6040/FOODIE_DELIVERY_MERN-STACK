@@ -1,10 +1,12 @@
+Got it! Let's make the necessary adjustments to the README to reflect that you only need an admin section instead of a separate admin panel.
+
 # Project Setup & Run Guide
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Backend Setup](#backend-setup)
 - [Frontend Setup](#frontend-setup)
-- [Admin Panel Setup](#admin-setup)
+- [Admin Setup](#admin-setup)
 - [MongoDB Atlas & Compass Setup](#mongodb-atlas--compass-setup)
 - [Environment Variables](#environment-variables)
 
@@ -75,9 +77,9 @@
      ```
    - Your frontend will be accessible at `http://localhost:5174`.
 
-## Admin Panel Setup
-1. **Install Admin Panel Dependencies**:
-   - In the integrated terminal, navigate to the admin panel folder within your project:
+## Admin Setup
+1. **Install Admin Dependencies**:
+   - In the integrated terminal, navigate to the admin folder within your project:
      ```bash
      cd admin
      ```
@@ -87,12 +89,12 @@
      ```
    - Wait for the installation to complete. You should see a `node_modules` folder in the sidebar after installation.
 
-2. **Run Admin Panel Server**:
-   - In the integrated terminal, type the following command to start the admin panel server:
+2. **Run Admin Server**:
+   - In the integrated terminal, type the following command to start the admin server:
      ```bash
      npm start
      ```
-   - Your admin panel will be accessible at `http://localhost:5173`.
+   - Your admin section will be accessible at `http://localhost:5173`.
 
 ## MongoDB Atlas & Compass Setup
 Follow these steps to set up MongoDB Atlas and MongoDB Compass for database management.
@@ -143,4 +145,4 @@ Replace `"Paste your stripe secret key here"` with your actual Stripe secret key
 
 ---
 
-This README provides step-by-step instructions for setting up and running your MERN stack project. You'll find details on how to clone the project from GitHub, set up MongoDB Atlas and MongoDB Compass for database management, configure environment variables for the backend, and run both frontend and admin panel servers separately. Follow these instructions carefully to successfully launch your project. If you need further assistance, refer to the project documentation or seek support resources.
+This README provides step-by-step instructions for setting up and running your MERN stack project. You'll find details on how to clone the project from GitHub, set up MongoDB Atlas and MongoDB Compass for database management, configure environment variables for the backend, and run both frontend and admin sections separately. Follow these instructions carefully to successfully launch your project. If you need further assistance, refer to the project documentation or seek support resources.
