@@ -1,3 +1,5 @@
+Got it! Here's the updated README with the correct URLs for the admin, frontend, and backend:
+
 # MERN Stack Food Delivery Fullstack Project
 
 ## Table of Contents
@@ -24,7 +26,7 @@ This project is a full-stack food delivery application built using the MERN (Mon
      ```bash
      git clone <repository_url>
      ```
-     Replace `<repository_url>` with the URL of the project repository.
+   - Replace `<repository_url>` with the URL of the project repository.
 
 2. **Open Project Folder**:
    - Open the project folder in your preferred code editor.
@@ -46,17 +48,27 @@ This project is a full-stack food delivery application built using the MERN (Mon
      JWT_SECRET="random#secret"
      STRIPE_SECRET_KEY="Paste your stripe secret key here"
      ```
-     Replace `"Paste your stripe secret key here"` with your actual Stripe secret key.
+   - Replace `"Paste your stripe secret key here"` with your actual Stripe secret key.
 
 5. **Run Backend Server**:
    - Start the backend server by running:
      ```bash
      npm run server
      ```
-   - The backend will run at `http://localhost:4000`.
+   - The backend will run at [http://localhost:4000/](http://localhost:4000/).
 
-## Frontend Setup
-1. **Install Frontend Dependencies**:
+## Frontend Setup (React + Vite)
+1. **Clone the Project**:
+   - Clone the project repository from GitHub using the following command:
+     ```bash
+     git clone <repository_url>
+     ```
+   - Replace `<repository_url>` with the URL of the project repository.
+
+2. **Open Project Folder**:
+   - Open the project folder in your preferred code editor.
+
+3. **Install Frontend Dependencies**:
    - Navigate to the frontend folder within your project in the terminal:
      ```bash
      cd frontend
@@ -66,15 +78,25 @@ This project is a full-stack food delivery application built using the MERN (Mon
      npm install
      ```
 
-2. **Run Frontend Server**:
+4. **Run Frontend Server**:
    - Start the frontend server by running:
      ```bash
-     npm start
+     npm run dev
      ```
-   - Access the frontend at `http://localhost:5174`.
+   - The frontend will be accessible at [http://localhost:5174/](http://localhost:5174/).
 
-## Admin Setup
-1. **Install Admin Dependencies**:
+## Admin Setup (React + Vite)
+1. **Clone the Project**:
+   - Clone the project repository from GitHub using the following command:
+     ```bash
+     git clone <repository_url>
+     ```
+   - Replace `<repository_url>` with the URL of the project repository.
+
+2. **Open Project Folder**:
+   - Open the project folder in your preferred code editor.
+
+3. **Install Admin Dependencies**:
    - Navigate to the admin folder within your project in the terminal:
      ```bash
      cd admin
@@ -84,12 +106,12 @@ This project is a full-stack food delivery application built using the MERN (Mon
      npm install
      ```
 
-2. **Run Admin Server**:
+4. **Run Admin Server**:
    - Start the admin server by running:
      ```bash
-     npm start
+     npm run dev
      ```
-   - Access the admin section at `http://localhost:5173`.
+   - The admin section will be accessible at [http://localhost:5173/](http://localhost:5173/).
 
 ## MongoDB Atlas & Compass Setup
 Follow these steps to set up MongoDB Atlas and MongoDB Compass for database management.
