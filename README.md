@@ -1,5 +1,3 @@
-Got it! Here's the updated README with the correct URLs for the admin, frontend, and backend:
-
 # MERN Stack Food Delivery Fullstack Project
 
 ## Table of Contents
@@ -19,12 +17,43 @@ This project is a full-stack food delivery application built using the MERN (Mon
 ## Prerequisites
 - **Node.js**: Ensure that Node.js is installed on your machine. If not, visit the [official Node.js website](https://nodejs.org/en/download/) to download and install it.
 - **GitHub Account**: You'll need a GitHub account to clone the project repository.
+- **React + Vite**: To set up the frontend and admin sections, you need to install React + Vite. Follow the steps below to install and start the project.
+
+## Frontend and Admin Setup with React + Vite
+### Install React + Vite:
+To set up the frontend and admin sections with React + Vite, you need to install the necessary dependencies globally. Run the following command in your terminal:
+```bash
+npm install -g create-vite@latest
+```
+This will install Vite globally on your machine.
+
+### Create Frontend Project:
+Navigate to your project directory in the terminal:
+```bash
+cd path_to_your_project
+```
+Create a new frontend project using Vite:
+```bash
+create-vite frontend --template react
+```
+This command will scaffold a new React project in the `frontend` directory of your project.
+
+### Create Admin Project:
+Navigate to your project directory in the terminal:
+```bash
+cd path_to_your_project
+```
+Create a new admin project using Vite:
+```bash
+create-vite admin --template react
+```
+This command will scaffold a new React project in the `admin` directory of your project.
 
 ## Backend Setup
 1. **Clone the Project**:
    - Clone the project repository from GitHub using the following command:
      ```bash
-     git clone <repository_url>
+     git clone https://github.com/Mohan6040/FOODIE_DELIVERY_MERN-STACK.git
      ```
    - Replace `<repository_url>` with the URL of the project repository.
 
@@ -50,25 +79,15 @@ This project is a full-stack food delivery application built using the MERN (Mon
      ```
    - Replace `"Paste your stripe secret key here"` with your actual Stripe secret key.
 
-5. **Run Backend Server**:
+5. **Start Backend Server**:
    - Start the backend server by running:
      ```bash
      npm run server
      ```
    - The backend will run at [http://localhost:4000/](http://localhost:4000/).
 
-## Frontend Setup (React + Vite)
-1. **Clone the Project**:
-   - Clone the project repository from GitHub using the following command:
-     ```bash
-     git clone <repository_url>
-     ```
-   - Replace `<repository_url>` with the URL of the project repository.
-
-2. **Open Project Folder**:
-   - Open the project folder in your preferred code editor.
-
-3. **Install Frontend Dependencies**:
+## Frontend Setup
+1. **Install Frontend Dependencies**:
    - Navigate to the frontend folder within your project in the terminal:
      ```bash
      cd frontend
@@ -78,25 +97,15 @@ This project is a full-stack food delivery application built using the MERN (Mon
      npm install
      ```
 
-4. **Run Frontend Server**:
+2. **Start Frontend Server**:
    - Start the frontend server by running:
      ```bash
      npm run dev
      ```
    - The frontend will be accessible at [http://localhost:5174/](http://localhost:5174/).
 
-## Admin Setup (React + Vite)
-1. **Clone the Project**:
-   - Clone the project repository from GitHub using the following command:
-     ```bash
-     git clone <repository_url>
-     ```
-   - Replace `<repository_url>` with the URL of the project repository.
-
-2. **Open Project Folder**:
-   - Open the project folder in your preferred code editor.
-
-3. **Install Admin Dependencies**:
+## Admin Setup
+1. **Install Admin Dependencies**:
    - Navigate to the admin folder within your project in the terminal:
      ```bash
      cd admin
@@ -106,7 +115,7 @@ This project is a full-stack food delivery application built using the MERN (Mon
      npm install
      ```
 
-4. **Run Admin Server**:
+2. **Start Admin Server**:
    - Start the admin server by running:
      ```bash
      npm run dev
@@ -116,20 +125,17 @@ This project is a full-stack food delivery application built using the MERN (Mon
 ## MongoDB Atlas & Compass Setup
 Follow these steps to set up MongoDB Atlas and MongoDB Compass for database management.
 
-### MongoDB Atlas
+MongoDB Atlas
 1. **Sign Up and Create a Cluster**:
-   - Visit the [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) website, sign up for an account, and create a new project with a cluster.
-
+   - Visit the MongoDB Atlas website, sign up for an account, and create a new project with a cluster.
 2. **Database User and Network Access**:
    - Create a database user with a username and password, and whitelist your IP address.
-
 3. **Connect to Your Cluster**:
    - Obtain the connection string from MongoDB Atlas and replace the placeholder `<password>` with your database user's password.
 
-### MongoDB Compass
+MongoDB Compass
 1. **Download and Install MongoDB Compass**:
-   - Visit the [MongoDB Compass](https://www.mongodb.com/products/compass) download page, download the appropriate version for your OS, and install it.
-
+   - Visit the MongoDB Compass download page, download the appropriate version for your OS, and install it.
 2. **Connect to Your MongoDB Atlas Cluster**:
    - Open MongoDB Compass, paste the connection string from MongoDB Atlas, replace `<password>` with your database user's password, and click "Connect".
 
@@ -148,7 +154,5 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 This README provides detailed instructions for setting up and running your MERN stack food delivery project. Follow these steps carefully to successfully launch your application. If you encounter any issues or have questions, refer to the project documentation or seek support resources. Contributions to enhance the project are appreciated, and the project is open-source under the MIT License.
