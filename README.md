@@ -2,7 +2,6 @@
 
 Welcome to FOODIE DELIVERY, a MERN (MongoDB, Express.js, React.js, Node.js) stack project for managing food delivery services.
 
-![FOODIE DELIVERY](https://example.com/foodie_delivery_banner.png)
 
 ## Table of Contents
 
