@@ -1,146 +1,167 @@
-# MERN Stack Food Delivery Fullstack Project
+# FOODIE DELIVERY MERN-STACK
+
+Welcome to FOODIE DELIVERY, a MERN (MongoDB, Express.js, React.js, Node.js) stack project for managing food delivery services.
+
+![FOODIE DELIVERY](https://example.com/foodie_delivery_banner.png)
 
 ## Table of Contents
-- [Overview](#overview)
-- [Prerequisites](#prerequisites)
-- [Backend Setup](#backend-setup)
-- [Frontend Setup](#frontend-setup)
-- [Admin Setup](#admin-setup)
-- [MongoDB Atlas & Compass Setup](#mongodb-atlas--compass-setup)
-- [Environment Variables](#environment-variables)
-- [Contributing](#contributing)
-- [License](#license)
 
-## Overview
-This project is a full-stack food delivery application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It provides users with a platform to explore a diverse menu, place orders, and manage their cart. The admin section allows restaurant owners to add items, list items, and manage orders efficiently.
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Project Structure](#project-structure)
+4. [Setup & Run Guide](#setup--run-guide)
+    - [Prerequisites](#prerequisites)
+    - [Backend Setup](#backend-setup)
+    - [Frontend & Admin Setup](#frontend--admin-setup)
+    - [Database Setup](#database-setup)
+    - [Environment Variables](#environment-variables)
+5. [Contributing](#contributing)
+6. [License](#license)
 
-## Prerequisites
-- **Node.js**: Ensure that Node.js is installed on your machine. If not, visit the [official Node.js website](https://nodejs.org/en/download/) to download and install it.
-- **GitHub Account**: You'll need a GitHub account to clone the project repository.
-- **React + Vite**: To set up the frontend and admin sections, you need to install React + Vite. Follow the steps below to install and start the project.
+## Introduction
 
-## Frontend and Admin Setup with React + Vite
-### Install React + Vite:
-To set up the frontend and admin sections with React + Vite, you need to install the necessary dependencies globally. Run the following command in your terminal:
-```bash
-npm install -g create-vite@latest
+FOODIE DELIVERY is a full-stack web application designed to streamline the process of online food ordering and delivery. It provides a user-friendly interface for customers to browse restaurants, view menus, place orders, and track deliveries. Restaurant owners/administrators can manage their establishments, menus, orders, and delivery operations through a dedicated admin panel.
+
+## Features
+
+- **User Interface**:
+  - Responsive design for seamless user experience across devices.
+  - Intuitive navigation and user-friendly interface.
+- **Customer Experience**:
+  - Browse restaurants by location, cuisine, or rating.
+  - View detailed restaurant information, including menus, reviews, and ratings.
+  - Place orders with customizations and special instructions.
+  - Track order status and estimated delivery time.
+- **Admin Panel**:
+  - Manage restaurant details, including name, location, and contact information.
+  - Create and update menus with customizable items and pricing.
+  - View and process incoming orders, update order status, and assign deliveries.
+- **Authentication & Security**:
+  - User authentication with JWT (JSON Web Tokens) for secure access to features.
+  - Password hashing for enhanced security of user accounts.
+- **Payment Integration**:
+  - Integration with Stripe for secure and seamless payment processing.
+  - Support for various payment methods, including credit/debit cards and digital wallets.
+
+## Project Structure
+
+The project follows a modular structure with separate directories for the backend, frontend, and admin components. Here's an overview of the directory structure:
+
 ```
-This will install Vite globally on your machine.
+FOODIE_DELIVERY_MERN-STACK/
+│
+├── backend/              # Backend server application
+│   ├── controllers/      # Request handlers for different routes
+│   ├── models/           # MongoDB models for data schema
+│   ├── routes/           # API routes and endpoint definitions
+│   ├── middleware/       # Middleware functions for request processing
+│   ├── config/           # Configuration files (e.g., database connection)
+│   └── server.js         # Main entry point for backend server
+│
+├── frontend/             # Frontend web application (customer interface)
+│   ├── public/           # Static assets (HTML, images, etc.)
+│   ├── src/              # React components, styles, and logic
+│   └── ...
+│
+├── admin/                # Admin panel web application
+│   ├── public/           # Static assets (HTML, images, etc.)
+│   ├── src/              # React components, styles, and logic
+│   └── ...
+│
+└── ...
+```
 
-### Create Frontend Project:
-Navigate to your project directory in the terminal:
-```bash
-cd path_to_your_project
-```
-Create a new frontend project using Vite:
-```bash
-create-vite frontend --template react
-```
-This command will scaffold a new React project in the `frontend` directory of your project.
+## Setup & Run Guide
 
-### Create Admin Project:
-Navigate to your project directory in the terminal:
-```bash
-cd path_to_your_project
-```
-Create a new admin project using Vite:
-```bash
-create-vite admin --template react
-```
-This command will scaffold a new React project in the `admin` directory of your project.
+### Prerequisites
 
-## Backend Setup
+Before getting started, ensure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org/en/download/): JavaScript runtime environment.
+- [Git](https://git-scm.com/downloads): Version control system (required for cloning the project repository).
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) (optional): Cloud-hosted MongoDB database service.
+
+### Backend Setup
+
 1. **Clone the Project**:
-   - Clone the project repository from GitHub using the following command:
-     ```bash
-     git clone https://github.com/Mohan6040/FOODIE_DELIVERY_MERN-STACK.git
-     ```
-   - Replace `<repository_url>` with the URL of the project repository.
+   ```bash
+   git clone https://github.com/Mohan6040/FOODIE_DELIVERY_MERN-STACK.git
+   cd FOODIE_DELIVERY_MERN-STACK
+   ```
 
-2. **Open Project Folder**:
-   - Open the project folder in your preferred code editor.
+2. **Install Backend Dependencies**:
+   ```bash
+   cd backend
+   npm install
+   ```
 
-3. **Install Backend Dependencies**:
-   - Navigate to the backend folder within your project in the terminal:
-     ```bash
-     cd backend
-     ```
-   - Install backend dependencies by running:
-     ```bash
-     npm install
-     ```
-
-4. **Setup Environment Variables**:
-   - Create a `.env` file in the backend folder.
-   - Add the following environment variables to the `.env` file:
+3. **Setup Environment Variables**:
+   - Create a `.env` file in the backend directory.
+   - Add the following environment variables:
      ```plaintext
      JWT_SECRET="random#secret"
      STRIPE_SECRET_KEY="Paste your stripe secret key here"
      ```
-   - Replace `"Paste your stripe secret key here"` with your actual Stripe secret key.
+     Replace `"Paste your stripe secret key here"` with your actual Stripe secret key.
 
-5. **Start Backend Server**:
-   - Start the backend server by running:
-     ```bash
-     npm run server
-     ```
-   - The backend will run at [http://localhost:4000/](http://localhost:4000/).
+4. **Setup MongoDB Atlas**:
+   - Follow the instructions in the [Database Setup](#database-setup) section.
 
-## Frontend Setup
+5. **Setup Stripe**:
+   - Open the `.env` file in the backend folder and paste your Stripe secret key in the `STRIPE_SECRET_KEY` variable.
+   - Open the `orderController` file located in the `backend/controllers` folder and add your country currency.
+
+6. **Run Backend Server**:
+   ```bash
+   npm run server
+   ```
+
+### Frontend & Admin Setup
+
 1. **Install Frontend Dependencies**:
-   - Navigate to the frontend folder within your project in the terminal:
-     ```bash
-     cd frontend
-     ```
-   - Install frontend dependencies by running:
-     ```bash
-     npm install
-     ```
+   ```bash
+   cd ../frontend
+   npm install
+   ```
 
-2. **Start Frontend Server**:
-   - Start the frontend server by running:
-     ```bash
-     npm run dev
-     ```
-   - The frontend will be accessible at [http://localhost:5174/](http://localhost:5174/).
+2. **Run Frontend Server**:
+   ```bash
+   npm run dev
+   ```
+   Your frontend will be accessible at [http://localhost:5174/](http://localhost:5174/).
 
-## Admin Setup
-1. **Install Admin Dependencies**:
-   - Navigate to the admin folder within your project in the terminal:
-     ```bash
-     cd admin
-     ```
-   - Install admin dependencies by running:
-     ```bash
-     npm install
-     ```
+3. **Install Admin Dependencies**:
+   ```bash
+   cd ../admin
+   npm install
+   ```
 
-2. **Start Admin Server**:
-   - Start the admin server by running:
-     ```bash
-     npm run dev
-     ```
-   - The admin section will be accessible at [http://localhost:5173/](http://localhost:5173/).
+4. **Run Admin Server**:
+   ```bash
+   npm run dev
+   ```
+   The admin panel will be accessible at [http://localhost:5173/](http://localhost:5173/).
 
-## MongoDB Atlas & Compass Setup
-Follow these steps to set up MongoDB Atlas and MongoDB Compass for database management.
+### Database Setup
 
-MongoDB Atlas
+Follow these steps if you're using MongoDB Atlas for database management.
+
 1. **Sign Up and Create a Cluster**:
-   - Visit the MongoDB Atlas website, sign up for an account, and create a new project with a cluster.
+   - Go to the [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) website and sign up for an account.
+   - Create a new project and a cluster within that project. Choose the free tier (M0) for testing and development purposes.
+
 2. **Database User and Network Access**:
-   - Create a database user with a username and password, and whitelist your IP address.
+   - Create a database user with a username and password.
+   - Whitelist your IP address.
+
 3. **Connect to Your Cluster**:
-   - Obtain the connection string from MongoDB Atlas and replace the placeholder `<password>` with your database user's password.
+   - Obtain the connection string.
+   - Replace `<password>` in the connection string with the database user's password.
+   - Update your `db.js` file in the backend with this connection string.
 
-MongoDB Compass
-1. **Download and Install MongoDB Compass**:
-   - Visit the MongoDB Compass download page, download the appropriate version for your OS, and install it.
-2. **Connect to Your MongoDB Atlas Cluster**:
-   - Open MongoDB Compass, paste the connection string from MongoDB Atlas, replace `<password>` with your database user's password, and click "Connect".
+### Environment Variables
 
-## Environment Variables
-Ensure you add the following environment variables to a `.env` file in the backend folder:
+Ensure the following environment variables are stored in the backend `.env` file:
 
 ```plaintext
 JWT_SECRET="random#secret"
@@ -150,9 +171,13 @@ STRIPE_SECRET_KEY="Paste your stripe secret key here"
 Replace `"Paste your stripe secret key here"` with your actual Stripe secret key.
 
 ## Contributing
-Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or create a pull request on the project's GitHub repository.
+
+Contributions to FOODIE DELIVERY are welcome! If you have suggestions for new features, improvements, or bug fixes, please feel free to open an issue or submit a pull request.
 
 ## License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This README provides detailed instructions for setting up and running your MERN stack food delivery project. Follow these steps carefully to successfully launch your application. If you encounter any issues or have questions, refer to the project documentation or seek support resources. Contributions to enhance the project are appreciated, and the project is open-source under the MIT License.
+---
+
+This README provides detailed instructions for setting up and running the FOODIE DELIVERY MERN-STACK project. It covers prerequisites, project structure, setup guides for the backend, frontend, and admin components, database setup (optional), environment variables, and information on contributing and licensing. If you encounter any issues or need further assistance, please refer to the project documentation or seek support resources. Enjoy building and managing your food delivery service with FOODIE DELIVERY!
