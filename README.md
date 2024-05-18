@@ -4,7 +4,7 @@
 - [Prerequisites](#prerequisites)
 - [Backend Setup](#backend-setup)
 - [Frontend Setup](#frontend-setup)
-- [Admin Panel Setup](#admin-panel-setup)
+- [Admin Panel Setup](#admin-setup)
 - [MongoDB Atlas & Compass Setup](#mongodb-atlas--compass-setup)
 - [Environment Variables](#environment-variables)
 
@@ -79,7 +79,7 @@
 1. **Install Admin Panel Dependencies**:
    - In the integrated terminal, navigate to the admin panel folder within your project:
      ```bash
-     cd admin-panel
+     cd admin
      ```
    - Then, type the following command and press Enter:
      ```bash
