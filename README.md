@@ -22,9 +22,9 @@ This project is a full-stack food delivery application built using the MERN (Mon
 1. **Clone the Project**:
    - Clone the project repository from GitHub using the following command:
      ```bash
-     git clone <repository_url>
+     git clone [<repository_url>](https://github.com/Mohan6040/FOODIE_DELIVERY_MERN-STACK.git)
      ```
-   - Replace `<repository_url>` with the URL of the project repository.
+  
 
 2. **Open Project Folder**:
    - Open the project folder in Visual Studio Code (VS Code) or any preferred code editor.
