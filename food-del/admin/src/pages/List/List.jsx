@@ -49,16 +49,16 @@ const List = () => {
           </div>
           {list.map((item,index)=>{
             return (
-              <div key={index} className='list-table-format'>
-                <img src={`${url}/images/`+item.image} alt="" />
+              <div key={index} className="list-table-format">
+                <img src={`${url}/images/` + item.image} alt="" />
                 <p>{item.name}</p>
                 <p>{item.category}</p>
-                {/* <p>${item.price}</p> */}
-                <p>{new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(item.price)}</p>
-
-                <p className='cursor' onClick={()=>removeFood(item._id)}>x</p>
+                <p>${item.price}</p>
+                <p className="cursor" onClick={() => removeFood(item._id)}>
+                  x
+                </p>
               </div>
-            )
+            );
           })}
         </div>
     </div>

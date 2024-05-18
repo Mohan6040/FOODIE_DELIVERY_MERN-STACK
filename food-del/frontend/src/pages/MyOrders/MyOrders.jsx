@@ -40,17 +40,7 @@ const MyOrders = () => {
                   }
                 })}
               </p>
-              {/* <p>${order.amount}.00</p> */}
-
-              <p>
-                {new Intl.NumberFormat("en-IN", {
-                  style: "currency",
-                  currency: "INR",
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2,
-                }).format(order.amount)}
-              </p>
-
+              <p>${order.amount}.00</p>
               <p>Items: {order.items.length}</p>
               <p>
                 <span>&#x25cf;</span> <b>{order.status}</b>

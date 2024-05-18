@@ -151,50 +151,21 @@ const PlaceOrder = () => {
       <div className="place-order-right">
         <div className="cart-total">
           <h2>Cart Totals</h2>
-          {/* <div>
-                        <div className="cart-total-details"><p>Subtotal</p><p>${getTotalCartAmount()}</p></div>
-                        <hr />
-                        <div className="cart-total-details"><p>Delivery Fee</p><p>${getTotalCartAmount() === 0 ? 0 : 5}</p></div>
-                        <hr />
-                        <div className="cart-total-details"><b>Total</b><b>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 5}</b></div>
-                    </div> */}
-
           <div>
             <div className="cart-total-details">
               <p>Subtotal</p>
-              <p>
-                {new Intl.NumberFormat("en-IN", {
-                  style: "currency",
-                  currency: "INR",
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2,
-                }).format(getTotalCartAmount())}
-              </p>
+              <p>${getTotalCartAmount()}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>
-                {new Intl.NumberFormat("en-IN", {
-                  style: "currency",
-                  currency: "INR",
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2,
-                }).format(getTotalCartAmount() === 0 ? 0 : 5)}
-              </p>
+              <p>${getTotalCartAmount() === 0 ? 0 : 5}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
               <b>
-                {new Intl.NumberFormat("en-IN", {
-                  style: "currency",
-                  currency: "INR",
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2,
-                }).format(
-                  getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 5
-                )}
+                ${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 5}
               </b>
             </div>
           </div>
